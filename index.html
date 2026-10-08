@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="付博的个人求职主页：控制科学与工程硕士研究生，Java 后端开发方向，关注 AI Agent、RAG 与 AI Coding。">
+  <meta name="theme-color" content="#09111f">
+  <title>付博｜Java 后端开发</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309111f'/%3E%3Cpath d='M17 20h30v7H25v8h18v7H25v12h-8z' fill='%235eead4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回首页"><span>FB</span><b>付博</b></a>
+    <nav aria-label="主导航">
+      <a href="#experience">实践</a>
+      <a href="#project">项目</a>
+      <a href="#stack">技术</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="切换明暗主题" aria-pressed="false">
+      <span aria-hidden="true">◐</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span>求职方向 / Java 后端开发</p>
+        <h1>把可靠的后端工程，<br><em>接入正在发生的 AI。</em></h1>
+        <p class="intro">控制科学与工程硕士研究生，关注高并发、缓存与消息系统的工程实践，正在探索 AI Agent、RAG 与 AI Coding。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#project">查看项目实践</a>
+          <a class="button secondary" href="#contact">联系与链接</a>
+        </div>
+      </div>
+      <aside class="terminal reveal" aria-label="个人信息摘要">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>profile.java</span></div>
+        <pre><code><span class="muted">01</span> public class <span class="accent">FuBo</span> {
+<span class="muted">02</span>   String role = <span class="string">"Java 后端"</span>;
+<span class="muted">03</span>   String school = <span class="string">"北京航空航天大学"</span>;
+<span class="muted">04</span>   String major = <span class="string">"控制科学与工程"</span>;
+<span class="muted">05</span>   String[] focus = {
+<span class="muted">06</span>     <span class="string">"Backend"</span>, <span class="string">"Agent"</span>,
+<span class="muted">07</span>     <span class="string">"RAG"</span>, <span class="string">"AI Coding"</span>
+<span class="muted">08</span>   };
+<span class="muted">09</span> }</code></pre>
+      </aside>
+      <div class="hero-index" aria-hidden="true">01 / PROFILE</div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading reveal">
+        <p>02 / EXPERIENCE</p>
+        <h2>真实的工程实践</h2>
+        <span>从平台基础能力到 Agent 工具接入，参与需求分析、方案设计、开发与多环境联调。</span>
+      </div>
+      <article class="experience-card reveal">
+        <div class="experience-meta">
+          <time>2026.06 — 2026.09</time>
+          <span class="label">实习经历</span>
+        </div>
+        <div class="experience-body">
+          <h3>AI 软件开发实习生</h3>
+          <p class="company">北京四方小仓科技有限公司</p>
+          <p>参与企业内部 AI 服务治理平台研发，覆盖平台基础功能、可观测性与 Agent 工具体系。公开版仅保留可说明的技术实践。</p>
+          <div class="practice-grid">
+            <div><span>01</span><h4>平台后端</h4><p>使用 Spring Event、独立线程池与 Jackson 构建异步变更审计和字段级 Diff。</p></div>
+            <div><span>02</span><h4>可观测性</h4><p>接入 Prometheus / Grafana 告警数据，参与归一化入库、查询展示与告警路由。</p></div>
+            <div><span>03</span><h4>Agent 工具</h4><p>参与 Agent-Skill-Tool 配置体系与动态 API Tool 管理，基于 OpenAPI 解析工具定义。</p></div>
+            <div><span>04</span><h4>流式交互</h4><p>参与 Console 与 NLP 服务的 SSE 集成，支持执行进度、动态表单和 ECharts 展示。</p></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section project-section" id="project">
+      <div class="section-heading reveal">
+        <p>03 / SELECTED PROJECT</p>
+        <h2>惠探本地商户导购平台</h2>
+        <span>面向本地消费场景，覆盖商户检索、优惠券秒杀、订单管理与智能客服。</span>
+      </div>
+      <div class="project-layout">
+        <div class="project-map reveal" aria-label="项目处理流程">
+          <div class="flow-node"><small>流量入口</small><strong>限流 / 校验</strong><span>Redis · AOP</span></div>
+          <b>→</b>
+          <div class="flow-node featured"><small>核心链路</small><strong>库存预扣</strong><span>Redis · Lua</span></div>
+          <b>→</b>
+          <div class="flow-node"><small>异步解耦</small><strong>订单创建</strong><span>Kafka · MySQL</span></div>
+          <div class="flow-branch">↓</div>
+          <div class="flow-node cache"><small>读取优化</small><strong>二级缓存</strong><span>Caffeine · Redis</span></div>
+        </div>
+        <div class="project-details reveal">
+          <div class="project-topline"><time>2025.10 — 2026.01</time><span>Java / Backend</span></div>
+          <details open>
+            <summary>秒杀与订单一致性</summary>
+            <p>基于 Redis + Lua 完成库存预扣减和一人一单原子校验，通过 Kafka 异步创建订单，并以数据库唯一约束兜底。</p>
+          </details>
+          <details>
+            <summary>并发状态控制</summary>
+            <p>针对支付回调与超时关单冲突，使用 CAS 乐观锁与订单状态条件更新保证状态单向流转。</p>
+          </details>
+          <details>
+            <summary>缓存与流量治理</summary>
+            <p>构建 Caffeine + Redis 二级缓存，使用缓存空值与逻辑过期处理常见缓存问题；通过滑动窗口进行多维限流。</p>
+          </details>
+          <details>
+            <summary>智能客服探索</summary>
+            <p>使用 LangChain4j Function Calling 封装商户、优惠券和订单查询工具，通过 Redis 保存多轮对话上下文。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="section-heading reveal">
+        <p>04 / TOOLBOX</p>
+        <h2>项目中实际使用的技术</h2>
+        <span>这里仅展示在项目或实习描述中有明确使用记录的技术。</span>
+      </div>
+      <div class="stack-grid reveal">
+        <div><h3>Backend</h3><p>Java</p><p>Spring Boot</p><p>Spring MVC</p><p>Spring Event</p><p>AOP</p></div>
+        <div><h3>Data</h3><p>MySQL</p><p>Redis</p><p>Caffeine</p><p>Lua</p><p>Jackson</p></div>
+        <div><h3>Infrastructure</h3><p>Kafka</p><p>PowerJob</p><p>Prometheus</p><p>Grafana</p><p>SSE</p></div>
+        <div><h3>AI Application</h3><p>Agent / Skill / Tool</p><p>LangChain4j</p><p>Function Calling</p><p>OpenAPI</p><p>ECharts</p></div>
+      </div>
+    </section>
+
+    <section class="section education" id="education">
+      <div class="section-heading reveal"><p>05 / EDUCATION</p><h2>教育背景</h2></div>
+      <div class="education-list reveal">
+        <article><time>2025.09 — 2028.06</time><h3>北京航空航天大学</h3><p>控制科学与工程 · 硕士<br>自动化科学与电气工程学院</p></article>
+        <article><time>2021.09 — 2025.06</time><h3>北京化工大学</h3><p>自动化 · 本科<br>信息科学技术学院</p></article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-copy reveal">
+        <p>06 / LET'S CONNECT</p>
+        <h2>如果这些实践与你的岗位需求契合，欢迎继续了解。</h2>
+        <span>本页是 PDF 简历的补充展示，不替代正式简历。</span>
+      </div>
+      <div class="contact-links reveal">
+        <div class="pending-link"><span>GitHub</span><b>待补充公开链接</b></div>
+        <div class="pending-link"><span>技术博客</span><b>待补充公开链接</b></div>
+        <div class="pending-link"><span>联系邮箱</span><b>待补充公开邮箱</b></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>付博 · Java Backend Developer</span><span>Built with HTML / CSS / JavaScript</span></footer>
+</body>
+</html>
