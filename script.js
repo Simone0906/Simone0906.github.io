@@ -2,15 +2,15 @@ const root = document.documentElement;
 const toggle = document.querySelector('.theme-toggle');
 const savedTheme = localStorage.getItem('portfolio-theme');
 
-if (savedTheme === 'light') {
-  root.classList.add('light');
+if (savedTheme === 'dark') {
+  root.classList.add('dark');
   toggle.setAttribute('aria-pressed', 'true');
 }
 
 toggle.addEventListener('click', () => {
-  const isLight = root.classList.toggle('light');
-  toggle.setAttribute('aria-pressed', String(isLight));
-  localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+  const isDark = root.classList.toggle('dark');
+  toggle.setAttribute('aria-pressed', String(isDark));
+  localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
 });
 
 const revealObserver = new IntersectionObserver((entries) => {
